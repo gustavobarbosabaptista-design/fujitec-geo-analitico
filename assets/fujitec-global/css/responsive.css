@@ -1,0 +1,765 @@
+@media (max-width: 74rem) {
+  :root {
+    --header-height: 4.25rem;
+    --footer-height: 4rem;
+    --gutter: clamp(1.2rem, 2.8vw, 2.4rem);
+  }
+
+  .hub__message {
+    left: 39%;
+    width: 30%;
+    min-width: 18rem;
+    padding: 1.8rem;
+  }
+
+  .slide__inner,
+  .slide--nexo-overview .slide__inner,
+  .slide--people-map .slide__inner,
+  .slide--badge-system .slide__inner,
+  .slide--rfid-tabs .slide__inner,
+  .slide--correlation .slide__inner,
+  .slide--camera-hero .slide__inner,
+  .slide--accessories .slide__inner,
+  .slide--infra-overview .slide__inner,
+  .slide--cabling .slide__inner,
+  .slide--certification .slide__inner,
+  .slide--fiber .slide__inner {
+    grid-template-columns: minmax(17.5rem, 32%) 1fr;
+    gap: 1.4rem;
+  }
+
+  .slide__copy h2 {
+    font-size: clamp(2rem, 3.5vw, 3.65rem);
+  }
+
+  .slide__copy > p {
+    font-size: clamp(0.9rem, 1.05vw, 1.06rem);
+  }
+
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resource-item {
+    min-height: 6.25rem;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .resource-item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .resource-item:nth-child(n + 3) {
+    border-bottom: 0;
+  }
+
+  .people-map {
+    grid-template-columns: minmax(0, 1fr) minmax(11rem, 31%);
+  }
+
+  .people-map__list article,
+  .badge-system__points article {
+    padding: 0.75rem;
+  }
+
+  .camera-hero__spec {
+    grid-template-columns: 1fr;
+  }
+
+  .camera-hero__spec div {
+    justify-content: flex-start;
+  }
+
+  .camera-family article > div {
+    min-height: 7.4rem;
+  }
+
+  .correlation {
+    padding-inline: 1rem;
+  }
+
+  .correlation article {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-height: 47rem) and (min-width: 56.26rem) {
+  :root {
+    --header-height: 4rem;
+    --footer-height: 3.65rem;
+  }
+
+  .presentation__header {
+    padding-inline: 1.25rem;
+  }
+
+  .brand-logo {
+    width: 8.26rem;
+    height: 2.8rem;
+  }
+
+  .brand-logo__asset {
+    transform: scale(0.56);
+  }
+
+  .header-control {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .slide__inner {
+    padding-block: 1.4rem;
+  }
+
+  .slide__copy h2 {
+    font-size: clamp(1.85rem, 3.1vw, 3.25rem);
+  }
+
+  .slide__copy > p {
+    margin-top: 0.9rem;
+    line-height: 1.42;
+  }
+
+  .route-action {
+    margin-top: 1rem;
+  }
+
+  .hub__message {
+    top: 27%;
+    min-height: 46%;
+  }
+
+  .hub__brand-logo {
+    margin-bottom: 0.7rem;
+  }
+
+  .hub__message p {
+    margin-top: 0.7rem;
+    padding-top: 0.8rem;
+  }
+
+  .hub__label--top {
+    top: 1.45rem;
+  }
+
+  .hub__field--infra .hub__label--bottom {
+    bottom: 4.6rem;
+  }
+
+  .hub__explore {
+    bottom: 1rem;
+  }
+
+  .resource-item {
+    min-height: 5.2rem;
+    padding: 0.65rem;
+  }
+
+  .resource-item p {
+    margin-top: 0.35rem;
+    line-height: 1.3;
+  }
+
+  .rfid-demo__tabs button {
+    min-height: 3.7rem;
+  }
+
+  .camera-hero figure {
+    bottom: 5.8rem;
+  }
+
+  .camera-hero__spec {
+    min-height: 5.8rem;
+    padding-block: 0.7rem;
+  }
+
+  .accessories article > div {
+    min-height: 7.2rem;
+  }
+}
+
+@media (max-width: 56.25rem), (orientation: portrait) and (max-width: 64rem) {
+  body {
+    overflow: hidden;
+  }
+
+  .presentation {
+    min-height: 0;
+  }
+
+  .presentation__header {
+    position: fixed;
+  }
+
+  .presentation__stage {
+    overflow: hidden;
+  }
+
+  .screen[data-active="true"] {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .hub {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-content: start;
+    gap: 1px;
+    padding-bottom: 1px;
+    background: var(--line);
+  }
+
+  .hub__field,
+  .hub__message {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hub__field--nexo {
+    order: 1;
+    height: clamp(25rem, 56svh, 35rem);
+  }
+
+  .hub__field--cftv {
+    order: 2;
+    height: clamp(30rem, 66svh, 42rem);
+  }
+
+  .hub__field--infra {
+    order: 3;
+    height: clamp(24rem, 52svh, 32rem);
+  }
+
+  .hub__message {
+    order: 4;
+    min-height: 24rem;
+    box-shadow: none;
+  }
+
+  .hub__message h1 {
+    max-width: 28ch;
+  }
+
+  .hub__label {
+    left: 2.6rem;
+    max-width: calc(100% - 4rem);
+  }
+
+  .hub__explore {
+    left: 1.5rem;
+  }
+
+  .hub__field--cftv .hub__explore {
+    right: 1.5rem;
+  }
+
+  .hub__field--cftv .product-cutout {
+    top: 14%;
+    right: 2%;
+    bottom: 5%;
+    width: 96%;
+    height: 80%;
+  }
+
+  .hub__route,
+  .hub__junction {
+    display: none;
+  }
+
+  .slide__inner,
+  .slide--nexo-overview .slide__inner,
+  .slide--people-map .slide__inner,
+  .slide--badge-system .slide__inner,
+  .slide--rfid-tabs .slide__inner,
+  .slide--correlation .slide__inner,
+  .slide--camera-hero .slide__inner,
+  .slide--accessories .slide__inner,
+  .slide--infra-overview .slide__inner,
+  .slide--cabling .slide__inner,
+  .slide--certification .slide__inner,
+  .slide--fiber .slide__inner,
+  .slide--video-pair .slide__inner,
+  .slide--dual-map .slide__inner,
+  .slide--camera-family .slide__inner,
+  .slide--zone-map .slide__inner {
+    position: relative;
+    inset: auto;
+    min-height: calc(100% - var(--footer-height));
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-content: start;
+    gap: 1.5rem;
+    padding: 2rem var(--gutter) calc(var(--footer-height) + 1.5rem);
+    overflow: visible;
+  }
+
+  .slide__copy,
+  .slide--zone-map .slide__copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    max-width: 48rem;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .slide__copy h2,
+  .slide--zone-map .slide__copy h2,
+  .slide--video-pair .slide__copy h2,
+  .slide--dual-map .slide__copy h2,
+  .slide--camera-family .slide__copy h2 {
+    max-width: 18ch;
+    font-size: clamp(2.2rem, 7.5vw, 4.3rem);
+  }
+
+  .slide--video-pair .slide__copy,
+  .slide--dual-map .slide__copy,
+  .slide--camera-family .slide__copy {
+    display: block;
+  }
+
+  .slide--video-pair .slide__copy > p,
+  .slide--dual-map .slide__copy > p,
+  .slide--camera-family .slide__copy > p {
+    margin-top: 1.2rem;
+  }
+
+  .slide__visual,
+  .slide--zone-map .slide__visual {
+    position: relative;
+    inset: auto;
+    min-height: 32rem;
+    overflow: hidden;
+  }
+
+  .slide--video-pair .slide__visual,
+  .slide--dual-map .slide__visual,
+  .slide--camera-family .slide__visual {
+    min-height: 48rem;
+  }
+
+  .slide--camera-hero .slide__visual,
+  .slide--accessories .slide__visual,
+  .slide--infra-overview .slide__visual,
+  .slide--certification .slide__visual {
+    min-height: 42rem;
+  }
+
+  .video-pair,
+  .dual-map,
+  .camera-family,
+  .accessories {
+    grid-template-columns: 1fr;
+  }
+
+  .video-panel,
+  .dual-map figure {
+    min-height: 23rem;
+  }
+
+  .overview-visual {
+    position: relative;
+    min-height: 45rem;
+  }
+
+  .overview-visual__map {
+    min-height: 27rem;
+  }
+
+  .zone-map {
+    position: relative;
+    min-height: 34rem;
+  }
+
+  .zone-map figcaption {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .people-map,
+  .infra-overview,
+  .certification {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(25rem, 1fr) auto;
+  }
+
+  .people-map__list,
+  .badge-system__points,
+  .infra-overview > div {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    border-top: 1px solid var(--line-strong);
+    border-left: 0;
+  }
+
+  .people-map__list article,
+  .badge-system__points article,
+  .infra-overview article {
+    min-height: 8.5rem;
+    border-right: 1px solid var(--line-strong);
+  }
+
+  .dual-map {
+    min-height: 48rem;
+  }
+
+  .badge-system {
+    min-height: 44rem;
+  }
+
+  .badge-system__map {
+    inset: 0 0 44% 0;
+  }
+
+  .badge-system__device {
+    top: 30%;
+    left: 50%;
+  }
+
+  .badge-system__points {
+    top: auto;
+    width: 100%;
+    height: 44%;
+  }
+
+  .rfid-intro {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(23rem, 1fr) auto;
+  }
+
+  .rfid-intro ol {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .rfid-intro li {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    min-height: 6rem;
+    padding: 0.75rem;
+    border-right: 1px solid var(--line-strong);
+    border-bottom: 0;
+  }
+
+  .rfid-demo__tabs {
+    overflow-x: auto;
+    grid-template-columns: repeat(5, minmax(8rem, 1fr));
+  }
+
+  .correlation {
+    min-height: 53rem;
+    padding: 1rem 1rem 9rem 4rem;
+  }
+
+  .correlation__flow {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    align-items: stretch;
+  }
+
+  .correlation__line {
+    top: 7%;
+    bottom: 7%;
+    left: 2.3rem;
+    width: 2px;
+    height: auto;
+  }
+
+  .correlation article,
+  .correlation article:nth-of-type(even) {
+    min-height: 0;
+    margin: 0;
+    border-top: 0;
+    border-left: 2px solid var(--red);
+  }
+
+  .correlation__report {
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    grid-template-columns: 3.6rem minmax(0, 1fr);
+    gap: 0.7rem;
+    min-height: 7.2rem;
+    padding: 0.65rem;
+  }
+
+  .correlation__report-preview {
+    width: 3.1rem;
+    height: 5.4rem;
+  }
+
+  .correlation__report-link {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: -0.2rem;
+  }
+
+  .camera-family article {
+    min-height: 27rem;
+  }
+
+  .accessories article {
+    min-height: 28rem;
+  }
+
+  .cabling {
+    min-height: 38rem;
+  }
+
+  .cabling__content {
+    grid-template-columns: 1fr;
+  }
+
+  .cabling__content ul {
+    justify-content: flex-start;
+  }
+
+  .certification ol {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .fiber {
+    min-height: 40rem;
+  }
+
+  .fiber ol {
+    width: 52%;
+  }
+}
+
+@media (max-width: 38rem) {
+  :root {
+    --header-height: 4rem;
+    --footer-height: 3.75rem;
+    --gutter: 1.15rem;
+  }
+
+  .presentation__header {
+    padding-inline: 0.9rem;
+  }
+
+  .brand-logo {
+    width: 7.38rem;
+    height: 2.5rem;
+  }
+
+  .brand-logo__asset {
+    transform: scale(0.5);
+  }
+
+  .header-control {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .presentation__menu {
+    top: calc(var(--header-height) + 0.4rem);
+    right: 0.6rem;
+    width: calc(100vw - 1.2rem);
+  }
+
+  .presentation__footer {
+    grid-template-columns: auto 1fr auto;
+    padding-inline: 0.65rem;
+  }
+
+  .presentation__trail-label {
+    display: none;
+  }
+
+  .presentation__counter {
+    grid-column: 2;
+  }
+
+  .presentation__nav {
+    grid-column: 3;
+  }
+
+  .nav-button {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .hub__field--nexo,
+  .hub__field--infra {
+    height: 25rem;
+  }
+
+  .hub__field--cftv {
+    height: 31rem;
+  }
+
+  .hub__message {
+    min-height: 22rem;
+    padding: 1.5rem;
+  }
+
+  .hub__label {
+    left: 2.4rem;
+  }
+
+  .hub__label strong {
+    font-size: 1rem;
+  }
+
+  .hub__label > span:not(.development-status),
+  .development-status {
+    font-size: 0.6rem;
+  }
+
+  .slide__inner,
+  .slide--nexo-overview .slide__inner,
+  .slide--people-map .slide__inner,
+  .slide--badge-system .slide__inner,
+  .slide--rfid-tabs .slide__inner,
+  .slide--correlation .slide__inner,
+  .slide--camera-hero .slide__inner,
+  .slide--accessories .slide__inner,
+  .slide--infra-overview .slide__inner,
+  .slide--cabling .slide__inner,
+  .slide--certification .slide__inner,
+  .slide--fiber .slide__inner,
+  .slide--video-pair .slide__inner,
+  .slide--dual-map .slide__inner,
+  .slide--camera-family .slide__inner,
+  .slide--zone-map .slide__inner {
+    gap: 1.15rem;
+    padding-top: 1.4rem;
+  }
+
+  .slide__copy h2,
+  .slide--zone-map .slide__copy h2,
+  .slide--video-pair .slide__copy h2,
+  .slide--dual-map .slide__copy h2,
+  .slide--camera-family .slide__copy h2 {
+    max-width: 16ch;
+    font-size: clamp(2rem, 10.2vw, 3.2rem);
+  }
+
+  .slide__copy > p {
+    font-size: 0.98rem;
+    line-height: 1.48;
+  }
+
+  .slide__visual {
+    min-height: 28rem;
+  }
+
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-item {
+    min-height: 5.5rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--line-strong) !important;
+  }
+
+  .resource-item:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .overview-visual {
+    min-height: 50rem;
+  }
+
+  .video-pair {
+    min-height: 50rem;
+  }
+
+  .video-panel figcaption,
+  .dual-map figcaption {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .zone-map figcaption span {
+    min-width: 11.5rem;
+    transform: none;
+  }
+
+  .people-map,
+  .infra-overview,
+  .certification {
+    grid-template-rows: 24rem auto;
+  }
+
+  .people-map__list,
+  .badge-system__points,
+  .infra-overview > div,
+  .certification ol {
+    grid-template-columns: 1fr;
+  }
+
+  .people-map__list article,
+  .badge-system__points article,
+  .infra-overview article {
+    min-height: 7rem;
+    border-right: 0;
+  }
+
+  .badge-system {
+    min-height: 58rem;
+  }
+
+  .badge-system__map {
+    inset: 0 0 58% 0;
+  }
+
+  .badge-system__device {
+    top: 22%;
+  }
+
+  .badge-system__points {
+    height: 58%;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .rfid-intro ol {
+    grid-template-columns: 1fr;
+  }
+
+  .rfid-intro li {
+    min-height: 4.5rem;
+    grid-template-columns: 2.3rem 1fr;
+    border-right: 0;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .camera-hero__spec {
+    min-height: 10rem;
+  }
+
+  .camera-hero figure {
+    bottom: 10rem;
+  }
+
+  .camera-family article,
+  .accessories article {
+    min-height: 29rem;
+  }
+
+  .cabling__content ul {
+    display: grid;
+  }
+
+  .fiber ol {
+    right: 1rem;
+    width: 68%;
+  }
+
+  .fiber__route {
+    right: 35%;
+  }
+}

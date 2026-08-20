@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f2efe8">
+    <title>Fujitec — NEXO · Video Analytics e Geolocalização</title>
+    <link rel="icon" href="assets/fujitec-global/brand/fujitec-icon-red.png" type="image/png" sizes="80x80">
+    <link rel="stylesheet" href="assets/fujitec-global/css/tokens.css">
+    <link rel="stylesheet" href="assets/fujitec-global/css/presentation.css">
+    <link rel="stylesheet" href="assets/fujitec-global/css/responsive.css">
+    <link rel="stylesheet" href="assets/fujitec-geo/css/geo.css">
+  </head>
+  <body>
+    <!-- Deck derivado da apresentação global Fujitec: trilha linear única do NEXO cobrindo somente Geolocalização e Video Analytics, sem hub, sem RFID e sem as frentes CFTV e infraestrutura. Mídia e CSS reaproveitados de assets/fujitec-global. -->
+    <main class="presentation" data-presentation data-theme="light" aria-label="Apresentação NEXO — Video Analytics e Geolocalização">
+      <header class="presentation__header">
+        <a class="brand-home" href="#nexo-01" data-route-link="nexo-01" aria-label="Fujitec — voltar ao início">
+          <span class="brand-logo" role="img" aria-label="Fujitec Tecnologia">
+            <span class="brand-logo__asset" aria-hidden="true">
+              <span class="brand-logo__mark"></span>
+              <span class="brand-logo__word"></span>
+            </span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <a class="header-control" href="fujitec-apresentacao-geo-analitico-dark.html#nexo-01" data-theme-link aria-label="Abrir tema escuro preservando a tela atual">
+            <svg class="icon theme-icon--light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"></path></svg>
+            <svg class="icon theme-icon--dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8 8 0 0 1 8.8 4 8.2 8.2 0 1 0 20 15.2Z"></path></svg>
+          </a>
+          <button class="header-control" type="button" data-menu-toggle aria-expanded="false" aria-controls="presentation-menu" aria-label="Abrir menu de telas">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+          </button>
+        </div>
+      </header>
+
+      <aside id="presentation-menu" class="presentation__menu" data-menu hidden aria-hidden="true" aria-label="Telas da apresentação">
+        <nav>
+          <a href="#nexo-01" data-route-link="nexo-01"><span>Visão geral</span><svg class="icon" viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h28M22 1l7 7-7 7"></path></svg></a>
+          <a href="#nexo-05" data-route-link="nexo-05"><span>Mapa operacional</span><svg class="icon" viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h28M22 1l7 7-7 7"></path></svg></a>
+          <a href="#nexo-06" data-route-link="nexo-06"><span>Crachá e localização</span><svg class="icon" viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h28M22 1l7 7-7 7"></path></svg></a>
+          <a href="#nexo-03" data-route-link="nexo-03"><span>Zonas críticas</span><svg class="icon" viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h28M22 1l7 7-7 7"></path></svg></a>
+          <a href="#nexo-04" data-route-link="nexo-04"><span>Pessoas por área</span><svg class="icon" viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h28M22 1l7 7-7 7"></path></svg></a>
+          <a href="#nexo-02" data-route-link="nexo-02"><span>Video Analytics</span><svg class="icon" viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h28M22 1l7 7-7 7"></path></svg></a>
+          <a href="#nexo-08" data-route-link="nexo-08"><span>Correlação e report</span><svg class="icon" viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h28M22 1l7 7-7 7"></path></svg></a>
+        </nav>
+      </aside>
+
+      <div class="presentation__progress" aria-label="Progresso da trilha">
+        <span data-progress role="progressbar" aria-label="Progresso da trilha" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1"></span>
+      </div>
+
+      <div class="presentation__stage">
+        <div class="presentation__track" data-track></div>
+      </div>
+
+      <footer class="presentation__footer" data-footer hidden>
+        <span class="presentation__trail-label" data-trail-label></span>
+        <span class="presentation__counter" data-counter>01 / 07</span>
+        <nav class="presentation__nav" aria-label="Navegação da trilha">
+          <button class="nav-button" type="button" data-prev aria-label="Tela anterior">
+            <svg class="icon icon--left" viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h28M22 1l7 7-7 7"></path></svg>
+          </button>
+          <button class="nav-button" type="button" data-next aria-label="Próxima tela">
+            <svg class="icon" viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h28M22 1l7 7-7 7"></path></svg>
+          </button>
+        </nav>
+      </footer>
+      <p class="presentation__live" data-live-region aria-live="polite" aria-atomic="true"></p>
+    </main>
+    <noscript>Esta apresentação requer JavaScript local para navegação e animações.</noscript>
+    <script src="assets/fujitec-global/vendor/gsap.min.js"></script>
+    <script type="module" src="assets/fujitec-geo/js/app.mjs"></script>
+  </body>
+</html>

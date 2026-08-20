@@ -1,0 +1,34 @@
+/* Ajustes do deck derivado (geo + video analytics) sobre o CSS global:
+   a abertura passa a ter 3 recursos e a correlação 4 etapas. */
+
+.slide--nexo-overview .resource-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.correlation__flow {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nav-button:disabled {
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+@media (max-width: 74rem) {
+  .slide--nexo-overview .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 56.25rem), (orientation: portrait) and (max-width: 64rem) {
+  .correlation__flow {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 38rem) {
+  .slide--nexo-overview .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
