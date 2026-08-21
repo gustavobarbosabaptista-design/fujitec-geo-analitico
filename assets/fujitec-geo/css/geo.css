@@ -19,6 +19,38 @@
   background: #04070c;
 }
 
+/* Logos dos parceiros (Piramide e Cognitia) ao lado da marca Fujitec. */
+.header-partners {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-right: auto;
+  margin-left: clamp(0.9rem, 2vw, 1.6rem);
+  padding-left: clamp(0.9rem, 2vw, 1.6rem);
+  border-left: 1px solid var(--line);
+}
+
+.header-partners img {
+  height: 2.15rem;
+  padding: 0.28rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+@media (max-width: 38rem) {
+  .header-partners {
+    gap: 0.4rem;
+    margin-left: 0.6rem;
+    padding-left: 0.6rem;
+  }
+
+  .header-partners img {
+    height: 1.65rem;
+    padding: 0.2rem 0.35rem;
+  }
+}
+
 /* Tela de pessoas por área: planta inteira, centralizada e sem recorte. */
 .people-map figure {
   background: #04070c;
