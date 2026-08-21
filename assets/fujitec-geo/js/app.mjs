@@ -38,7 +38,7 @@ function renderNexoOverview(slide) {
   return `<div class="overview-visual">
     <figure class="overview-visual__map">${map}</figure>
     <div class="resource-grid">${slide.resources.map(([name, text]) => {
-      const development = text === "Em Desenvolvimento";
+      const development = text === "Por Demanda";
       return `<article class="resource-item${development ? " resource-item--development" : ""}"><h3>${esc(name)}</h3>${development ? `<strong>${esc(text)}</strong>` : `<p>${esc(text)}</p>`}</article>`;
     }).join("")}</div>
   </div>`;
@@ -82,7 +82,7 @@ function renderBadgeSystem(slide) {
   return `<div class="badge-system">
     <figure class="badge-system__map">${map}</figure>
     <div class="badge-system__points">${slide.points.map(([title, text]) => {
-      const development = text === "Em Desenvolvimento";
+      const development = text === "Por Demanda";
       return `<article${development ? ' class="resource-item--development"' : ""}><h3>${esc(title)}</h3>${development ? `<strong>${esc(text)}</strong>` : `<p>${esc(text)}</p>`}</article>`;
     }).join("")}</div>
   </div>`;

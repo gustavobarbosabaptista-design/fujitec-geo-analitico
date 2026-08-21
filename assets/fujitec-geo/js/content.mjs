@@ -24,7 +24,7 @@ export const slides = Object.freeze([
     resources: [
       ["Video Analytics", "Transforma imagens do CFTV em eventos de segurança configurados."],
       ["Geolocalização", "Relaciona pessoas e deslocamentos às zonas da operação."],
-      ["Reconhecimento facial", "Em Desenvolvimento"]
+      ["Reconhecimento facial", "Por Demanda"]
     ]
   },
   {
@@ -67,7 +67,7 @@ export const slides = Object.freeze([
       ["Localização", "Posição e zona associadas à identidade do crachá."],
       ["SOS", "Canal direto para sinalizar uma situação crítica."],
       ["Geofence", "Regras por área ajudam a orientar permanência e circulação."],
-      ["Reconhecimento facial", "Em Desenvolvimento"]
+      ["Reconhecimento facial", "Por Demanda"]
     ]
   },
   {
