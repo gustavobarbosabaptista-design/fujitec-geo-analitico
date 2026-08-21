@@ -76,8 +76,11 @@ function renderDualMap(slide) {
 }
 
 function renderBadgeSystem(slide) {
+  const map = slide.video
+    ? `<video class="visual-image" muted loop playsinline preload="metadata" poster="${esc(slide.media)}" aria-label="${esc(slide.alt)}"><source src="${esc(slide.video)}" type="video/mp4"></video>`
+    : mediaImage(slide);
   return `<div class="badge-system">
-    <figure class="badge-system__map">${mediaImage(slide)}</figure>
+    <figure class="badge-system__map">${map}</figure>
     <div class="badge-system__points">${slide.points.map(([title, text]) => {
       const development = text === "Em Desenvolvimento";
       return `<article${development ? ' class="resource-item--development"' : ""}><h3>${esc(title)}</h3>${development ? `<strong>${esc(text)}</strong>` : `<p>${esc(text)}</p>`}</article>`;

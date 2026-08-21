@@ -19,6 +19,11 @@
   background: #04070c;
 }
 
+.badge-system__map video {
+  object-position: center;
+  background: #04070c;
+}
+
 .zone-map video {
   width: 100%;
   height: 100%;

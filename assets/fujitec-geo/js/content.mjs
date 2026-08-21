@@ -54,8 +54,9 @@ export const slides = Object.freeze([
     title: "Transforme o crachá em um recurso de proteção e acesso.",
     lead: "O crachá conecta a pessoa ao mapa e pode apoiar fluxos de segurança da sua equipe sem depender da leitura contínua de uma câmera.",
     visual: "badge-system",
+    video: "assets/fujitec-geo/media/mapa-sinotico.mp4",
     media: "assets/fujitec-global/images/planta-3d-rtls.webp",
-    alt: "Mapa 3D de localização de pessoas por crachá",
+    alt: "Mapa 3D de localização de pessoas por crachá em movimento",
     deviceCard: {
       file: "assets/fujitec-geo/media/cracha-rtls.png",
       alt: "Crachá RTLS Fujitec com botão SOS",
