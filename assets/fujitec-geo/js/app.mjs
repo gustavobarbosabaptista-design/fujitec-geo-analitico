@@ -111,10 +111,11 @@ function renderCorrelation(slide) {
 
 function renderContact(slide) {
   return `<div class="contact">
-    <div class="contact__cards">${slide.contacts.map((item) => `<a class="contact-card" href="${esc(item.href)}" target="_blank" rel="noopener">
-      <span>${esc(item.label)}</span>
+    <div class="contact__cards">${slide.contacts.map((item, index) => `<a class="contact-card" href="${esc(item.href)}" target="_blank" rel="noopener">
+      <span class="contact-card__label"><i>${String(index + 1).padStart(2, "0")}</i>${esc(item.label)}</span>
       <strong>${esc(item.value)}</strong>
       <small>${esc(item.detail)}</small>
+      ${arrowIcon()}
     </a>`).join("")}</div>
     <div class="contact__certs">${slide.certifications.map((item) => `<figure>
       <img src="${esc(item.file)}" alt="${esc(item.alt)}">
