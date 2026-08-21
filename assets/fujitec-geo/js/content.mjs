@@ -56,6 +56,8 @@ export const slides = Object.freeze([
     visual: "badge-system",
     media: "assets/fujitec-global/images/planta-3d-rtls.webp",
     alt: "Mapa 3D de localização de pessoas por crachá",
+    device: "assets/fujitec-geo/media/cracha-rtls.png",
+    deviceAlt: "Crachá RTLS Fujitec usado pelo colaborador, com botão SOS",
     points: [
       ["Localização", "Posição e zona associadas à identidade do crachá."],
       ["SOS", "Canal direto para sinalizar uma situação crítica."],

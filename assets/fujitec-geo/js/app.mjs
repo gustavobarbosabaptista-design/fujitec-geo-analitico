@@ -36,7 +36,7 @@ function renderNexoOverview(slide) {
     ? `<video class="visual-image" muted loop playsinline preload="metadata" poster="${esc(slide.media)}" aria-label="${esc(slide.alt)}"><source src="${esc(slide.video)}" type="video/mp4"></video>`
     : mediaImage(slide);
   return `<div class="overview-visual">
-    <figure class="overview-visual__map">${map}<span class="map-scan" aria-hidden="true"></span></figure>
+    <figure class="overview-visual__map">${map}</figure>
     <div class="resource-grid">${slide.resources.map(([name, text]) => {
       const development = text === "Em Desenvolvimento";
       return `<article class="resource-item${development ? " resource-item--development" : ""}"><h3>${esc(name)}</h3>${development ? `<strong>${esc(text)}</strong>` : `<p>${esc(text)}</p>`}</article>`;
@@ -76,12 +76,15 @@ function renderDualMap(slide) {
 }
 
 function renderBadgeSystem(slide) {
+  const device = slide.device
+    ? `<img class="badge-photo" src="${esc(slide.device)}" alt="">`
+    : `<div class="badge-card"><img src="assets/fujitec-global/brand/fujitec-logo.png" alt=""><span>Identidade conectada</span><i aria-hidden="true"></i></div>`;
   return `<div class="badge-system">
     <figure class="badge-system__map">${mediaImage(slide)}</figure>
-    <div class="badge-system__device" role="img" aria-label="Crachá conectado ao mapa operacional">
+    <div class="badge-system__device" role="img" aria-label="${esc(slide.deviceAlt ?? "Crachá conectado ao mapa operacional")}">
       <span class="badge-signal badge-signal--one" aria-hidden="true"></span>
       <span class="badge-signal badge-signal--two" aria-hidden="true"></span>
-      <div class="badge-card"><img src="assets/fujitec-global/brand/fujitec-logo.png" alt=""><span>Identidade conectada</span><i aria-hidden="true"></i></div>
+      ${device}
     </div>
     <div class="badge-system__points">${slide.points.map(([title, text]) => {
       const development = text === "Em Desenvolvimento";
