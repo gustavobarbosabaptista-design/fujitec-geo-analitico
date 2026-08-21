@@ -67,11 +67,12 @@ export const slides = Object.freeze([
     id: "nexo-03",
     trail: "nexo",
     title: "Cubra seu setor crítico com uma leitura visual única.",
-    lead: "O mapa espacial organiza câmeras, zonas e ocorrências em uma referência reconhecível para quem precisa agir.",
+    lead: "O mapa espacial organiza câmeras, zonas e ocorrências em uma referência reconhecível para quem precisa agir. Cada deslocamento fica registrado e gera um histórico consultável por pessoa, zona e período.",
     visual: "zone-map",
+    video: "assets/fujitec-geo/media/planta-2d.mp4",
     media: "assets/fujitec-global/images/planta-2d-zonas.webp",
-    alt: "Planta 2D com zonas operacionais destacadas",
-    points: ["Zonas permanentes", "Zonas temporárias", "Áreas de exclusão", "Eventos por setor"]
+    alt: "Planta 2D com zonas operacionais e histórico de deslocamentos",
+    points: ["Zonas permanentes", "Zonas temporárias", "Áreas de exclusão", "Eventos por setor", "Histórico de deslocamentos"]
   },
   {
     id: "nexo-04",

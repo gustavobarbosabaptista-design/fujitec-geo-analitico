@@ -54,8 +54,11 @@ function renderVideoPair(slide) {
 }
 
 function renderZoneMap(slide) {
+  const map = slide.video
+    ? `<video muted loop playsinline preload="metadata" poster="${esc(slide.media)}" aria-label="${esc(slide.alt)}"><source src="${esc(slide.video)}" type="video/mp4"></video>`
+    : mediaImage(slide);
   return `<figure class="zone-map">
-    ${mediaImage(slide)}
+    ${map}
     <div class="zone-map__routes" aria-hidden="true"><span></span><span></span><span></span></div>
     <figcaption>${slide.points.map((point, index) => `<span style="--zone-index:${index}">${esc(point)}</span>`).join("")}</figcaption>
   </figure>`;

@@ -19,6 +19,25 @@
   background: #04070c;
 }
 
+.zone-map video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background: #04070c;
+}
+
+/* Com o vídeo, as etiquetas ficam à esquerda para não cobrir o painel
+   de histórico de trajeto mostrado na gravação. */
+.slide--zone-map .zone-map figcaption {
+  right: auto;
+  left: var(--gutter);
+}
+
+.slide--zone-map .zone-map figcaption span {
+  transform: translateX(calc(var(--zone-index) * 1rem));
+}
+
 /* Capa: tela de abertura em coluna única, sem visual lateral. */
 .slide--cover .slide__inner {
   grid-template-columns: 1fr;
