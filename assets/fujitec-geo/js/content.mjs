@@ -164,7 +164,7 @@ export const slides = Object.freeze([
       },
       {
         label: "Parceria comercial",
-        value: "+55 11 98019-5401",
+        value: "(11) 98019-5401",
         detail: "Cognitia Soluções Inteligentes",
         href: "tel:+5511980195401"
       }
