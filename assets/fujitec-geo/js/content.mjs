@@ -161,6 +161,12 @@ export const slides = Object.freeze([
         value: "(19) 99777-5917",
         detail: "(85) 99714-5469",
         href: "tel:+5519997775917"
+      },
+      {
+        label: "Parceria comercial",
+        value: "+55 11 98019-5401",
+        detail: "Cognitia Soluções Inteligentes",
+        href: "tel:+5511980195401"
       }
     ],
     certifications: [
