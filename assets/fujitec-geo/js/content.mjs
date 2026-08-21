@@ -158,7 +158,7 @@ export const slides = Object.freeze([
       },
       {
         label: "Telefone / WhatsApp",
-        value: "+55 85 99714-5469",
+        value: "(85) 99714-5469",
         detail: "(19) 99777-5917",
         href: "tel:+5585997145469"
       },
