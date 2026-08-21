@@ -19,6 +19,15 @@
   background: #04070c;
 }
 
+/* Tela de pessoas por área: planta centralizada e sem marcadores animados. */
+.people-map figure img {
+  object-position: center;
+}
+
+.people-map .location-pulse {
+  display: none;
+}
+
 .badge-system__map video {
   object-position: center;
   background: #04070c;
