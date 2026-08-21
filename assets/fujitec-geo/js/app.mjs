@@ -32,8 +32,11 @@ const routeLink = ({ href, title, detail, label = "Explorar" }) => `<a class="ro
 const mediaImage = (slide, className = "visual-image") => `<img class="${className}" src="${esc(slide.media)}" alt="${esc(slide.alt)}" loading="eager">`;
 
 function renderNexoOverview(slide) {
+  const map = slide.video
+    ? `<video class="visual-image" muted loop playsinline preload="metadata" poster="${esc(slide.media)}" aria-label="${esc(slide.alt)}"><source src="${esc(slide.video)}" type="video/mp4"></video>`
+    : mediaImage(slide);
   return `<div class="overview-visual">
-    <figure class="overview-visual__map">${mediaImage(slide)}<span class="map-scan" aria-hidden="true"></span></figure>
+    <figure class="overview-visual__map">${map}<span class="map-scan" aria-hidden="true"></span></figure>
     <div class="resource-grid">${slide.resources.map(([name, text]) => {
       const development = text === "Em Desenvolvimento";
       return `<article class="resource-item${development ? " resource-item--development" : ""}"><h3>${esc(name)}</h3>${development ? `<strong>${esc(text)}</strong>` : `<p>${esc(text)}</p>`}</article>`;

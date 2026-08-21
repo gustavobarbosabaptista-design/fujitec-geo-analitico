@@ -18,8 +18,9 @@ export const slides = Object.freeze([
     title: "Conecte imagem e localização ao contexto da sua operação.",
     lead: "NEXO reúne sinais que normalmente chegam separados para que sua equipe enxergue o evento, a zona e as pessoas relacionadas.",
     visual: "nexo-overview",
+    video: "assets/fujitec-geo/media/mapa-sinotico.mp4",
     media: "assets/fujitec-global/media/geo-mapa-sinotico.jpg",
-    alt: "Mapa sinótico industrial usado pelo NEXO",
+    alt: "Mapa sinótico industrial usado pelo NEXO em movimento",
     resources: [
       ["Video Analytics", "Transforma imagens do CFTV em eventos de segurança configurados."],
       ["Geolocalização", "Relaciona pessoas e deslocamentos às zonas da operação."],
