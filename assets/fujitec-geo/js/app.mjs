@@ -76,16 +76,8 @@ function renderDualMap(slide) {
 }
 
 function renderBadgeSystem(slide) {
-  const device = slide.device
-    ? `<img class="badge-photo" src="${esc(slide.device)}" alt="">`
-    : `<div class="badge-card"><img src="assets/fujitec-global/brand/fujitec-logo.png" alt=""><span>Identidade conectada</span><i aria-hidden="true"></i></div>`;
   return `<div class="badge-system">
     <figure class="badge-system__map">${mediaImage(slide)}</figure>
-    <div class="badge-system__device" role="img" aria-label="${esc(slide.deviceAlt ?? "Crachá conectado ao mapa operacional")}">
-      <span class="badge-signal badge-signal--one" aria-hidden="true"></span>
-      <span class="badge-signal badge-signal--two" aria-hidden="true"></span>
-      ${device}
-    </div>
     <div class="badge-system__points">${slide.points.map(([title, text]) => {
       const development = text === "Em Desenvolvimento";
       return `<article${development ? ' class="resource-item--development"' : ""}><h3>${esc(title)}</h3>${development ? `<strong>${esc(text)}</strong>` : `<p>${esc(text)}</p>`}</article>`;
@@ -154,6 +146,10 @@ function renderSlide(slide) {
       <div class="slide__copy">
         <h2 id="${esc(slide.id)}-title">${esc(slide.title)}</h2>
         <p>${esc(slide.lead)}</p>
+        ${slide.deviceCard ? `<div class="device-card">
+          <img src="${esc(slide.deviceCard.file)}" alt="${esc(slide.deviceCard.alt)}">
+          <div><strong>${esc(slide.deviceCard.title)}</strong><span>${esc(slide.deviceCard.text)}</span></div>
+        </div>` : ""}
         ${slide.close ? routeLink({ href: homeRoute, title: slide.close, detail: "Início da apresentação", label: slide.close }) : ""}
       </div>
       <div class="slide__visual">${renderVisual ? renderVisual(slide) : ""}</div>
