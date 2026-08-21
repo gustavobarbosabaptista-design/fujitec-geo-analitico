@@ -115,7 +115,28 @@ const visualRenderer = Object.freeze({
   correlation: renderCorrelation
 });
 
+const renderCoverTitle = (slide) => {
+  const { title, emphasis } = slide;
+  const start = emphasis ? title.indexOf(emphasis) : -1;
+  if (start < 0) return esc(title);
+  return `${esc(title.slice(0, start))}<em>${esc(emphasis)}</em>${esc(title.slice(start + emphasis.length))}`;
+};
+
+function renderCoverSlide(slide) {
+  return `<section id="${esc(slide.id)}" class="screen slide slide--cover" data-screen="${esc(slide.id)}" data-trail="${esc(slide.trail)}" data-position="1" aria-labelledby="${esc(slide.id)}-title" aria-hidden="true" inert>
+    <div class="slide__inner" data-scrollable>
+      <div class="slide__copy slide__copy--cover">
+        <span class="cover-kicker">${esc(slide.kicker)}</span>
+        <h2 id="${esc(slide.id)}-title">${renderCoverTitle(slide)}</h2>
+        <p>${esc(slide.lead)}</p>
+        <span class="cover-signature">${esc(slide.signature)}</span>
+      </div>
+    </div>
+  </section>`;
+}
+
 function renderSlide(slide) {
+  if (slide.visual === "cover") return renderCoverSlide(slide);
   const renderVisual = visualRenderer[slide.visual];
   const trail = trailDefinitions[slide.trail];
   const position = trail.slides.findIndex((item) => item.id === slide.id) + 1;
@@ -157,9 +178,8 @@ function createMotion({ root, reducedMotion, gsapRef = globalThis.gsap } = {}) {
     const visual = screen.querySelector(":scope .slide__visual");
     return new Promise((resolve) => {
       timeline = gsapRef.timeline({ onComplete: () => { timeline = null; resolve(); } });
-      timeline
-        .fromTo(copy, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.58, stagger: 0.055, ease: "expo.out" }, 0)
-        .fromTo(visual, { clipPath: "inset(0 7% 0 0)", opacity: 0.72 }, { clipPath: "inset(0 0% 0 0)", opacity: 1, duration: 0.78, ease: "expo.out" }, 0.06);
+      timeline.fromTo(copy, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.58, stagger: 0.055, ease: "expo.out" }, 0);
+      if (visual) timeline.fromTo(visual, { clipPath: "inset(0 7% 0 0)", opacity: 0.72 }, { clipPath: "inset(0 0% 0 0)", opacity: 1, duration: 0.78, ease: "expo.out" }, 0.06);
     });
   };
   return { animate, destroy: () => { timeline?.kill?.(); timeline = null; } };

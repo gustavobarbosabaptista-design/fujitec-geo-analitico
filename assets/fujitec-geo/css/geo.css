@@ -14,6 +14,54 @@
   pointer-events: none;
 }
 
+/* Capa: tela de abertura em coluna única, sem visual lateral. */
+.slide--cover .slide__inner {
+  grid-template-columns: 1fr;
+}
+
+.slide__copy--cover {
+  max-width: 60rem;
+}
+
+.cover-kicker {
+  display: block;
+  margin-bottom: clamp(1rem, 2.4vh, 1.7rem);
+  color: var(--red-strong);
+  font-family: var(--font-mono);
+  font-size: var(--small);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.slide__copy--cover h2 {
+  max-width: 18ch;
+  font-size: var(--display-xl);
+}
+
+.slide__copy--cover h2 em {
+  color: var(--red-strong);
+  font-style: normal;
+}
+
+.slide__copy--cover > p {
+  max-width: 56ch;
+}
+
+.cover-signature {
+  display: block;
+  max-width: 34rem;
+  margin-top: clamp(1.8rem, 4.5vh, 3rem);
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--small);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 74rem) {
   .slide--nexo-overview .resource-grid {
     grid-template-columns: repeat(2, 1fr);

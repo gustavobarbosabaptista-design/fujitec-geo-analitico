@@ -3,6 +3,16 @@
 // A mídia é reaproveitada de assets/fujitec-global.
 export const slides = Object.freeze([
   {
+    id: "capa",
+    trail: "nexo",
+    kicker: "Plataforma de Segurança Inteligente",
+    title: "Ambientes que veem, localizam e reagem.",
+    emphasis: "veem, localizam e reagem.",
+    lead: "Video Analytics + geolocalização dentro da planta para proteger pessoas, controlar zonas de risco e acelerar a resposta operacional.",
+    signature: "Fujitec • Segurança conectada ao contexto",
+    visual: "cover"
+  },
+  {
     id: "nexo-01",
     trail: "nexo",
     title: "Conecte imagem e localização ao contexto da sua operação.",
