@@ -136,6 +136,104 @@
   transform: translateX(calc(var(--zone-index) * 1rem));
 }
 
+/* Tela de encerramento: contatos e certificações. */
+.slide__copy .cover-kicker {
+  margin-bottom: clamp(0.8rem, 1.8vh, 1.3rem);
+}
+
+.slide__copy h2 em {
+  color: var(--red-strong);
+  font-style: normal;
+}
+
+.contact {
+  height: 100%;
+  display: grid;
+  gap: clamp(1.2rem, 2.6vh, 2rem);
+  align-content: center;
+  max-width: 34rem;
+  margin-left: auto;
+}
+
+.contact__cards {
+  display: grid;
+  border-top: 2px solid var(--red);
+}
+
+.contact-card {
+  display: grid;
+  gap: 0.35rem;
+  padding: clamp(1rem, 2vh, 1.5rem) 1.2rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  text-decoration: none;
+}
+
+.contact-card span {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--small);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-card strong {
+  color: var(--red-strong);
+  font-size: clamp(1.15rem, 1.5vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.contact-card small {
+  color: var(--muted);
+  font-size: var(--body);
+}
+
+.contact__certs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+}
+
+.contact__certs figure {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.contact__certs img {
+  height: clamp(2.6rem, 4vh, 3.4rem);
+  padding: 0.3rem;
+  border-radius: 0.45rem;
+  background: #fff;
+}
+
+.contact__certs figcaption {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--small);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+@media (max-width: 56.25rem), (orientation: portrait) and (max-width: 64rem) {
+  .contact {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .contact__certs {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Capa: tela de abertura em coluna única, sem visual lateral. */
 .slide--cover .slide__inner {
   grid-template-columns: 1fr;

@@ -109,6 +109,20 @@ function renderCorrelation(slide) {
   </div>`;
 }
 
+function renderContact(slide) {
+  return `<div class="contact">
+    <div class="contact__cards">${slide.contacts.map((item) => `<a class="contact-card" href="${esc(item.href)}" target="_blank" rel="noopener">
+      <span>${esc(item.label)}</span>
+      <strong>${esc(item.value)}</strong>
+      <small>${esc(item.detail)}</small>
+    </a>`).join("")}</div>
+    <div class="contact__certs">${slide.certifications.map((item) => `<figure>
+      <img src="${esc(item.file)}" alt="${esc(item.alt)}">
+      <figcaption>${esc(item.caption)}</figcaption>
+    </figure>`).join("")}</div>
+  </div>`;
+}
+
 const visualRenderer = Object.freeze({
   "nexo-overview": renderNexoOverview,
   "video-pair": renderVideoPair,
@@ -116,7 +130,8 @@ const visualRenderer = Object.freeze({
   "people-map": renderPeopleMap,
   "dual-map": renderDualMap,
   "badge-system": renderBadgeSystem,
-  correlation: renderCorrelation
+  correlation: renderCorrelation,
+  contact: renderContact
 });
 
 const renderCoverTitle = (slide) => {
@@ -147,7 +162,8 @@ function renderSlide(slide) {
   return `<section id="${esc(slide.id)}" class="screen slide slide--${esc(slide.visual)}" data-screen="${esc(slide.id)}" data-trail="${esc(slide.trail)}" data-position="${position}" aria-labelledby="${esc(slide.id)}-title" aria-hidden="true" inert>
     <div class="slide__inner" data-scrollable>
       <div class="slide__copy">
-        <h2 id="${esc(slide.id)}-title">${esc(slide.title)}</h2>
+        ${slide.kicker ? `<span class="cover-kicker">${esc(slide.kicker)}</span>` : ""}
+        <h2 id="${esc(slide.id)}-title">${renderCoverTitle(slide)}</h2>
         <p>${esc(slide.lead)}</p>
         ${slide.deviceCard ? `<div class="device-card">
           <img src="${esc(slide.deviceCard.file)}" alt="${esc(slide.deviceCard.alt)}">

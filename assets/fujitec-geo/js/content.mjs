@@ -133,7 +133,48 @@ export const slides = Object.freeze([
       media: "assets/fujitec-global/media/relatorio-carga-suspensa-preview.png",
       alt: "Prévia da primeira página do relatório de análise de vídeo sobre carga suspensa",
       file: "assets/fujitec-global/media/relatorio-carga-suspensa.pdf"
-    },
+    }
+  },
+  {
+    id: "contato",
+    trail: "nexo",
+    kicker: "Fale conosco",
+    title: "Vamos conversar sobre segurança na sua operação.",
+    emphasis: "segurança na sua operação.",
+    lead: "Solicite uma demonstração ao vivo da plataforma Fujitec — Video Analytics e Geolocalização — na sua operação, de forma presencial ou remota.",
+    visual: "contact",
+    contacts: [
+      {
+        label: "Site",
+        value: "fujitecbrasil.com.br",
+        detail: "@fujitecbrasilnz",
+        href: "https://fujitecbrasil.com.br"
+      },
+      {
+        label: "E-mail",
+        value: "info@fujitecbrasil.com.br",
+        detail: "Rio das Ostras — RJ",
+        href: "mailto:info@fujitecbrasil.com.br"
+      },
+      {
+        label: "Telefone / WhatsApp",
+        value: "(19) 99777-5917",
+        detail: "(85) 99714-5469",
+        href: "tel:+5519997775917"
+      }
+    ],
+    certifications: [
+      {
+        file: "assets/fujitec-geo/brand/anatel.png",
+        alt: "Anatel",
+        caption: "Homologação de radiofrequência"
+      },
+      {
+        file: "assets/fujitec-geo/brand/inmetro.png",
+        alt: "Inmetro",
+        caption: "Conformidade metrológica"
+      }
+    ],
     close: "Voltar ao início"
   }
 ]);
