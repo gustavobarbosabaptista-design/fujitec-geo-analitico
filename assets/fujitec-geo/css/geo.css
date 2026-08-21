@@ -31,11 +31,11 @@
 }
 
 .header-partners img {
-  height: 1.9rem;
+  height: 2.4rem;
 }
 
 .header-partners img[alt^="Cognitia"] {
-  height: 2.5rem;
+  height: 3rem;
   filter: brightness(0);
 }
 
@@ -55,11 +55,11 @@
   }
 
   .header-partners img {
-    height: 1.4rem;
+    height: 1.7rem;
   }
 
   .header-partners img[alt^="Cognitia"] {
-    height: 1.8rem;
+    height: 2.1rem;
   }
 }
 
