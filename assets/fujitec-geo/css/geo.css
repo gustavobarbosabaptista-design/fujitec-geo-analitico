@@ -19,8 +19,13 @@
   background: #04070c;
 }
 
-/* Tela de pessoas por área: planta centralizada e sem marcadores animados. */
+/* Tela de pessoas por área: planta inteira, centralizada e sem recorte. */
+.people-map figure {
+  background: #04070c;
+}
+
 .people-map figure img {
+  object-fit: contain;
   object-position: center;
 }
 
